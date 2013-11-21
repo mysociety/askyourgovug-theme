@@ -1,15 +1,16 @@
-THEME_NAME = File.split(File.expand_path("../..", __FILE__))[1]
-
 class ActionController::Base
-    # The following prepends the path of the current theme's views to
-    # the "filter_path" that Rails searches when deciding which
-    # template to use for a view.  It does so by creating a method
-    # uniquely named for this theme.
-    path_function_name = "set_view_paths_for_#{THEME_NAME}"
-    before_filter path_function_name.to_sym
-    send :define_method, path_function_name do
-        self.prepend_view_path File.join(File.dirname(__FILE__), "views")
-    end
+  before_filter :set_askyourgovug_view_paths
+
+  def set_askyourgovug_view_paths
+    self.prepend_view_path File.join(File.dirname(__FILE__), "views")
+  end
+
+  # Note that set_view_paths is called by Alaveteli from the
+  # rescue_action_in_public method, in order that error pages
+  # may be themed correctly. Since askyourgovug-theme is a
+  # primary theme that ought to style error pages, we define
+  # this as an alias
+  alias :set_view_paths :set_askyourgovug_view_paths
 end
 
 # In order to have the theme lib/ folder ahead of the main app one,
