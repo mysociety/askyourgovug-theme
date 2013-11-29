@@ -3,29 +3,45 @@
 <%= render :partial => 'sidebar' %>
 
 <div id="left_column_flip">
-<h1 id="privacy"><%= @title %> <a href="#privacy">#</a> </h1>
+<h1 id="privacy"><%= @title %> <!-- <a href="#privacy">#</a> --> </h1>
+<p>
+On AskyourGov.ug, only your name is visible to the general public unless you put other personal information in the 
+body of the request.
+</p>
+<p>
+We strongly advise you not to put any personal information in the body of the request. That includes not putting your 
+phone number, home address, email address or other personal or family or work details. You don’t need to give any of 
+this information in order to exercise your right to information.
+</p>
+<p>
+If a Ugandan public Official needs to speak with you by phone to clarify the request, you should send your number to 
+them directly and not via this platform.
+</p>
 
 <dl>
 
-<dt id="email_address">Who gets to see my email address? <a href="#email_address">#</a> </dt>
+<dt id="email_address">Who gets to see my email address? <!-- <a href="#email_address">#</a>--> </dt>
 
-<dd><p>We will not disclose your email address to anyone unless we are obliged to by law,
-or you ask us to. This includes the public authority that you are sending a
-request to.  They only get to see an email address
-@<%= AlaveteliConfiguration::incoming_email_domain %> which is specific to that request.  </p>
+<dd>
+<p>
+Your e-mail address will not be shown on the website unless you include in the message or in a footer to your email.
+</p>
+<p>We will not disclose your email address to anyone unless we are obliged to by law,
+or you ask us to. This includes the public agencies that you are sending requests to. They only get to see an email address
+@<%= AlaveteliConfiguration::incoming_email_domain %> which is specific to that request.</p>
 <p>If you send a message to another user on the site, then it will reveal your
 email address to them. You will be told that this is going to happen.</p>
 </dd>
 
-<dt id="nasty_spam">Will you send nasty, brutish spam to my email address? <a href="#nasty_spam">#</a> </dt>
-<dd>Nope. After you sign up to <%= site_name %> we will only send you emails
+<dt id="nasty_spam">Will you send nasty, brutish spam to my email address? <!-- <a href="#nasty_spam">#</a> --> </dt>
+<dd>No! After you sign up to <%= site_name %> we will only send you emails
 relating to a request you made, an email alert that you have signed up for,
 or for other reasons that you specifically authorise. We will never give or
 sell your email addresses to anyone else, unless we are obliged to by law, or
 you ask us to.
 </dd>
 
-<dt id="public_request">Why will my name and my request appear publicly on the site? <a href="#public_request">#</a> </dt>
+<dt id="public_request">Why will my name and my request appear publicly on the site? </dt>
 
 <dd>
 <p>We publish your request on the Internet so that anybody can read it and
@@ -33,58 +49,33 @@ make use of the information that you have found. We do not normally delete
 requests (<a href="#delete_requests">more details</a>).
 </p>
 <p>
-Your name is tangled up with your request, so has to be published as well.
+Your name is part of your request, so has to be published as well.
 It is only fair, as we're going to publish the name of the civil servant who
-writes the response to your request.  Using your real name also helps people
-get in touch with you to assist you with your research or to campaign with you.
+writes the response to your request. By law, you must use your real name for the request to be a valid ATI request.
 </p>
-<p>By law, you must use your real name for the request to be a valid Freedom of
-Information request. See the next question for alternatives if you do not want
-to publish your full name.
-</p>
+<p>Using your real name also helps people get in touch with you to assist you with your research or to campaign with you.</p>
 </dd>
 
-<dt id="real_name">Can I make an FOI request using a pseudonym? <a href="#real_name">#</a> </dt>
 
+<dt id="real_name">Can I make an ATI request using a pseudonym? </dt>
 
 <dd>
-<p>Technically, you must use your real name for your request to be a valid Freedom of Information request in law. See this
-<a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/detailed_specialist_guides/name_of_applicant_fop083_v1.pdf">guidance from the Information Commissioner</a> (January 2009).
-</p>
+<p>You are advised to use your real name when making an access to documents request. You are exercising a right which is 
+the basis for an open and democratic society and this should be under your real name.</p>
 
-<p>However, the same guidance also says it is good practice for the public
-authority to still consider a request made using an obvious pseudonym.
-You should refer to this if a public authority refuses a request because you
-used a pseudonym.</p>
+<p>If you feel that your name is very well known – for example you are a famous person or well known journalist – you 
+might want to get a friend or colleague to file the request. If you are really stuck, contact us and we will try to help
+you file the request; please note that we don’t have the resources to do this for everyone.</p>
 
-<p>Be careful though, even if the authority follows this good practice, the
-pseudonym will probably make it impossible for you to complain to the
-Information Commissioner later about the handling of your request.
-</p>
-
-<p>There are several good alternatives to using a pseudonym.</p>
-
-<ul>
-<li>Use a different form of your name. The guidance says
-that "Mr Arthur Thomas Roberts" can make a valid request as "Arthur Roberts",
-"A. T. Roberts", or "Mr Roberts", but <strong>not</strong> as "Arthur" or "A.T.R.".
-</li>
-<li>Women may use their maiden name.</li>
-<li>In most cases, you may use any name by which you are "widely known and/or
-is regularly used".
-<li>Use the name of an organisation, the name of a company, the trading name of
-a company, or the trading name of a sole trader.
-<li>Ask someone else to make the request on your behalf.
-<li>You may, if you are really stuck, ask us to make the request on
-your behalf. Please <a href="/help/contact">contact us</a> with
-a good reason why you cannot make the request yourself and cannot
-ask a friend to. We don't have the resources to do this for everyone.
-</ul>
-
-<p>Please do not try to impersonate someone else.</p>
-
+<p>Please note that if you use a pseudonym, you will not be able to exercise your legal right to appeal to the 
+Court of Law.</p> 
+<p>We ask for a first and a last name. If you have more than one first or last name you can use these, but the minimum 
+is a first and last name.</p> 
+<p>If we see silly names or really obvious pseudonyms, we will remove the request and contact the requester about this.</p> 
+<p>Please do not impersonate someone else!</p>
 </dd>
 
+<!--
 <dt id="full_address">They've asked for my postal address! <a href="#full_address">#</a> </dt>
 
 <dd>
@@ -119,11 +110,11 @@ embarrassed the authority into finding one they had already.</p>
 in order to receive the documents, mark your request as "They are going to reply by post", and it will
 give you an email address to use for that purpose.</p>
 </dd>
+-->
 
-<dt id="delete_requests">Can you delete my requests, or alter my name?  <a href="#delete_requests">#</a> </dt>
+<dt id="delete_requests">Can you delete my requests, or alter my name? </dt>
 
 <dd>
-
 <p><%= site_name %> is a permanent, public archive of Freedom of
 Information requests. Even though you may not find the response to
 a request useful any more, it may be of interest to others. For this
@@ -135,11 +126,9 @@ on the website, <a href="#takedown">see the next question</a>.
 Similarly, we may also remove other personal information.
 </p>
 
-<p>If you're worried about this before you make your request,
-see the section on <a href="#real_name">pseudonyms</a>.</p>
-
 </dd>
 
+<!--
 <dt id="takedown">Can you take down personal information about me? <a href="#takedown">#</a> </dt>
 
 <dd>
@@ -180,6 +169,7 @@ that authorities resend these with the personal information removed.</p>
 
 <p><strong>Learn more</strong> from the help for <a href="/help/officers">FOI officers</a> --&gt;
 
+-->
 <div id="hash_link_padding"></div>
 
 
