@@ -34,7 +34,7 @@ color:#FE0000 !important;
 }
 
 #navigation_search input#navigation_search_button {
- background-image: url(/alavetelitheme/images/search-button.png);
+ background-image: image-url('search-button.png');
 }
 
 #logged_in_bar {
@@ -84,7 +84,7 @@ font-weight:400;
 }
 
 .request_listing span.desc {
-background:url(/images/quote-marks.png) no-repeat;
+background:image-url('quote-marks.png') no-repeat;
 color:#444;
 }
 
@@ -110,7 +110,7 @@ color:#000000;
 }
 
 div.comment_in_request {
-background:url(/images/stripes-70-light2.png);
+background:image-url('stripes-70-light2.png');
 border-color:#5F5F5F;
 border-style:dotted;
 border-width:1px;
@@ -125,7 +125,7 @@ font-family:'DeliciousRoman', Arial, sans-serif;
 }
 
 div.frontpage-box {
-background:url(/images/stripes.png);
+background:image-url('stripes.png');
 border:1px solid #DEBEDD;
 font-family:'DeliciousRoman', Arial, sans-serif;
 color:#000000;
@@ -196,7 +196,7 @@ font-family:'DeliciousRoman';
 }
 
 #ui-datepicker-div .ui-icon-circle-triangle-w, #ui-datepicker-div .ui-icon-circle-triangle-e {
-background-image:url("/stylesheets/admin-theme/images/ui-icons_222222_256x240.png");
+background-image:image-url('ui-icons_222222_256x240.png');
 }
 
 #ui-datepicker-div .ui-state-default:hover {
@@ -256,13 +256,13 @@ color:#FE0000;
 
 
 body.front {
-background:url(../images/home-grad.png) repeat-x 0 160px;
+background:image-url('home-grad.png') repeat-x 0 160px;
 }
 
 .request_listing span.desc {
-background:url(../images/quote-marks.png) no-repeat;
+background:image-url('quote-marks.png') no-repeat;
 }
 
 #frontpage_examples .excerpt {
-background:url(../images/quote-marks.png) no-repeat;
+background:image-url('quote-marks.png') no-repeat;
 }
