@@ -258,3 +258,12 @@ background:image-url('quote-marks.png') no-repeat;
 #frontpage_examples .excerpt {
 background:image-url('quote-marks.png') no-repeat;
 }
+
+#footer img.facebook-icon,
+#footer img.twitter-icon {
+margin: 0 4px 0 0;
+}
+
+#footer img.facebook-icon {
+vertical-align: middle;
+}
