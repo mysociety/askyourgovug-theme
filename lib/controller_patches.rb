@@ -5,4 +5,7 @@
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode
 #
 Rails.configuration.to_prepare do
+  HelpController.class_eval do
+      def downloads ; end
+  end
 end

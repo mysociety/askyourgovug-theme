@@ -14,7 +14,7 @@ class ActionController::Base
 end
 
 # Prepend the asset directories in this theme to the asset path:
-['stylesheets', 'images', 'javascripts'].each do |asset_type|
+['stylesheets', 'images', 'javascripts', 'docs'].each do |asset_type|
   theme_asset_path = File.join(File.dirname(__FILE__),
                                '..',
                                'assets',

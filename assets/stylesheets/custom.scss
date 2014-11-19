@@ -259,6 +259,24 @@ background:image-url('quote-marks.png') no-repeat;
 background:image-url('quote-marks.png') no-repeat;
 }
 
+#help_downloads .downloads-list {
+list-style: none;
+padding-left: 0;
+}
+
+#help_downloads .downloads-list .downloads-list-item {
+display: table;
+margin-bottom: 12px;
+}
+
+#help_downloads .pdf-download {
+background: image-url('icon_application_pdf_large.png') no-repeat;
+display: table-cell;
+height: 48px;
+padding-left: 52px;
+vertical-align: middle;
+}
+
 #footer img.facebook-icon,
 #footer img.twitter-icon {
 margin: 0 4px 0 0;
