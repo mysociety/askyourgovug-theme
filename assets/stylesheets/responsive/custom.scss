@@ -750,63 +750,6 @@ dt {
   }
 }
 
-/* How it works section */
-.steps__list {
-  li {
-    @include respond-min( $main_menu-mobile_menu_cutoff ){
-      width: 33.3333%;
-      margin-left: 0 !important;
-    }
-  }
-}
-
-.steps__step-box {
-  background-color: $color_white;
-  padding: 2em;
-  box-shadow: 0 1px 2px transparentize($color_black, 0.75);
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    min-height: 11em;
-  }
-  p {
-    line-height: 1.5em;
-    color: $color_neutral_dark;
-  }
-}
-
-.steps__step-number {
-  height: 3.5em;
-  width: 3.5em;
-  background-color: $color_primary;
-  box-shadow: 0 1px 2px transparentize($color_black, 0.75);
-  padding: 1em;
-  border-radius: 100%;
-  color: $color_white;
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    left: 50%;
-    margin-left: -1.75em;
-    bottom: -1em;
-    top: auto;
-  }
-}
-
-.learn-more-foi {
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    margin-top: 3em;
-  }
-  a {
-    @include button-secondary;
-  }
-}
-
-.learn-more-foi {
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    margin-top: 3em;
-  }
-  a {
-    @include button-secondary;
-  }
-}
-
 .latest-requests {
   .button-secondary {
     @include button-secondary;
@@ -841,6 +784,7 @@ dt {
   @include respond-min($main_menu-mobile_menu_cutoff) {
     padding: 5em 0 8em;
     background-image: image-url('homepage-background.jpg');
+    margin-bottom: 3em;
   }
 
   a {
