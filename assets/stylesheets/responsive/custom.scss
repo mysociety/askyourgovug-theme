@@ -14,7 +14,7 @@ $color_neutral_dark: $color_black;
 $color_primary: $color_red;
 $color_secondary: $color_green;
 
-$body-bg: $color_neutral_light;
+$body-bg: $color_white;
 
 $body-font-color: $color_neutral_dark;
 $link-color: $color_red;
@@ -33,6 +33,9 @@ $notice-color: $color_green;
 $error-color: $color_red;
 $action-color: $color_orange;
 
+$logo-width: 77px;
+$logo-height: 103px;
+
 /* Mixin styles */
 
 /* Hide text when it's replaced by an image */
@@ -45,14 +48,11 @@ $action-color: $color_orange;
 /* General styling of nav menu items */
 %menu-item {
   text-decoration: none;
-  color: transparentize($color_white, 0.2);
-  @include ie8 {
-    color: $color_white;
-  }
+  color: $color_primary;
   transition: background-color 0.5s ease-out;
   &:hover{
-    background-color: darken($color_primary, 15%);
-    color: $color_white;
+    background-color: $color_white;
+    color: darken($color_primary, 15%);
   }
 
 }
@@ -61,10 +61,7 @@ $action-color: $color_orange;
 %selected-menu-item {
   font-weight: bold;
   color: $color_primary;
-  background-color: $color_neutral_light;
-  &:hover{
-      background-color: $color_neutral_light;
-  }
+  background-color: $color_white;
 }
 
 /* General styles */
@@ -218,11 +215,11 @@ a.link_button_green_large {
 /* Header */
 
 #banner_inner {
-  background-color: $color_primary;
+  background-color: $color_neutral_light;
 }
 
 #topnav {
-  background-color: darken($color_primary, 10%);
+  background-color: $color_neutral_light;
 }
 
 .site-title__logo {
@@ -329,7 +326,6 @@ a.link_button_green_large {
     @extend %menu-item;
     background-color: transparent;
     font-weight: normal;
-    color: $color_white;
     &:hover,
     &:active,
     &:focus {
