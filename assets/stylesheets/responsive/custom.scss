@@ -19,7 +19,8 @@ $body-bg: $color_white;
 $body-font-color: $color_neutral_dark;
 $link-color: $color_red;
 $action-color: $color_green;
-$font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$header-font-family: 'Droid Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $form_input-bg: $color_white;
 
 $button-bg: darken($color_green, 10%);
@@ -72,6 +73,14 @@ body{
 
 .entirebody {
   font-family: $font-family;
+}
+
+h1, h2, h3 {
+  font-family: $header-font-family;
+}
+
+h1 {
+  font-weight: bold;
 }
 
 a {
@@ -245,6 +254,7 @@ a.link_button_green_large {
 
 #navigation{
   border-bottom: none;
+  font-family: $header-font-family;
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     position: relative;
     // Move the navigation to make space for the logo
@@ -823,6 +833,11 @@ dt {
 
 .intro__title {
   color: $color_primary;
+  font-weight: bold;
+}
+
+.intro__browse {
+  font-family: $header-font-family;
 }
 
 .new-request__content {
@@ -836,6 +851,7 @@ dt {
   color: $color_red;
   font-size: 1.4375em;
   margin: 0 0 0.5em;
+  font-weight: bold;
 }
 
 .new-request__description {
