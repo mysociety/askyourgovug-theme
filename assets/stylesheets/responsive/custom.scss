@@ -216,6 +216,10 @@ a.link_button_green_large {
 
 #banner_inner {
   background-color: $color_neutral_light;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    position: relative;
+    padding-top: 2em;
+  }
 }
 
 #topnav {
@@ -232,11 +236,20 @@ a.link_button_green_large {
     width: $logo-width;
     height: $logo-height;
     background-size: $logo-width $logo-height;
+    // The logo on big screens sits next to the navigation
+    position: absolute;
+    left: 0.9375rem;
+    top: -1em;
   }
 }
 
 #navigation{
   border-bottom: none;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    position: relative;
+    // Move the navigation to make space for the logo
+    padding-left: ($logo-width + 20px);
+  }
   a {
     @extend %menu-item;
   }
@@ -515,7 +528,7 @@ a.link_button_green_large {
 
   .rsp_menu_button{
     position: absolute;
-    top: 5px; // vertically centre the button in the header
+    top: 23px; // vertically centre the button in the header
     right: 4px; // 15px for margin minus 9 for background offset
     @extend .image-replacement;
     background-image: image-url('hamburger.png');
