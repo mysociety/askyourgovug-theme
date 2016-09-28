@@ -6,6 +6,6 @@
 #
 Rails.configuration.to_prepare do
   HelpController.class_eval do
-      def downloads ; end
+    def downloads ; end
   end
 end
