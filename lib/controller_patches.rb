@@ -6,6 +6,17 @@
 #
 Rails.configuration.to_prepare do
   HelpController.class_eval do
-      def downloads ; end
+    def downloads ; end
+
+    private
+
+    def catch_spam
+      if request.post? && params[:contact]
+        if !params[:contact][:comment].blank? || !params[:contact].key?(:comment)
+          redirect_to frontpage_url
+        end
+      end
+    end
+
   end
 end
