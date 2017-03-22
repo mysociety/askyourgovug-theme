@@ -38,6 +38,7 @@ $alaveteli_route_extensions << 'custom-routes.rb'
 # Append individual theme assets to the asset path
 theme_asset_path = File.join(File.dirname(__FILE__),
                              '..',
+                             'app',
                              'assets')
 theme_asset_path = Pathname.new(theme_asset_path).cleanpath.to_s
 
@@ -52,6 +53,7 @@ def prepend_theme_assets
   ['stylesheets', 'images', 'javascripts', 'docs'].each do |asset_type|
     theme_asset_path = File.join(File.dirname(__FILE__),
                                  '..',
+                                 'app',
                                  'assets',
                                  asset_type)
 
