@@ -5,6 +5,16 @@
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode
 #
 Rails.configuration.to_prepare do
+
+  # Temporary fix to prevent daily exception notification
+  TrackController.class_eval do
+    before_filter :strip_trailing_or, :only => [:track_search_query]
+
+    def strip_trailing_or
+      params[:query_array] = params[:query_array].sub(/\sOR\z/, '')
+    end
+  end
+
   HelpController.class_eval do
     def downloads ; end
 

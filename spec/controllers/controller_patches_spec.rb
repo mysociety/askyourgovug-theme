@@ -2,6 +2,29 @@
 ALAVETELI_TEST_THEME = 'askyourgovug-theme'
 require File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','..', '..', 'spec','spec_helper'))
 
+describe TrackController do
+
+  it 'strips a trailing OR from a search query' do
+    get :track_search_query,
+        :feed => 'feed',
+        :query_array => " (latest_status:waiting_response OR " \
+                        "latest_status:waiting_clarification OR " \
+                        "waiting_classification:true OR " \
+                        "latest_status:internal_review OR " \
+                        "latest_status:gone_postal OR " \
+                        "latest_status:error_message OR"
+
+    expected = " (latest_status:waiting_response OR " \
+               "latest_status:waiting_clarification OR " \
+               "waiting_classification:true OR " \
+               "latest_status:internal_review OR " \
+               "latest_status:gone_postal OR " \
+               "latest_status:error_message"
+    expect(assigns[:query]).to eq(expected)
+  end
+
+end
+
 describe HelpController do
 
   context "when overriden by the theme" do
