@@ -267,19 +267,15 @@ a.link_button_green_large {
 
 /* Header */
 
-#banner_inner {
-  background-color: $color_neutral_light;
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    position: relative;
-    padding-top: 2em;
+.topnav {
+  background-color: $topnav_bg;
+  @media( max-width: $main_menu-mobile_menu_cutoff ) {
+    box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.1);
   }
 }
 
-#topnav {
-  background-color: $color_neutral_light;
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    padding: 0 0 0.5em 0;
-  }
+#banner_inner {
+  background-color: $banner_inner_bg;
 }
 
 .site-title__logo {
