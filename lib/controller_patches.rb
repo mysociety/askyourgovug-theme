@@ -8,7 +8,7 @@ Rails.configuration.to_prepare do
 
   # Temporary fix to prevent daily exception notification
   TrackController.class_eval do
-    before_filter :strip_trailing_or, :only => [:track_search_query]
+    before_action :strip_trailing_or, :only => [:track_search_query]
 
     def strip_trailing_or
       params[:query_array] = params[:query_array].sub(/\sOR\z/, '')
