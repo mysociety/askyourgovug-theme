@@ -1,3 +1,4 @@
+
 /* Mixin styles */
 
 /* Hide text when it's replaced by an image */
@@ -10,7 +11,10 @@
 /* General styling of nav menu items */
 %menu-item {
   text-decoration: none;
-  color: $color_primary;
+  color: transparentize($color_primary, 0.2);
+  @include ie8 {
+    color: $color_primary;
+  }
   transition: background-color 0.5s ease-out;
   &:hover,
   &:active,
@@ -117,14 +121,6 @@ body{
 
 .entirebody {
   font-family: $font-family;
-}
-
-h1, h2, h3 {
-  font-family: $header-font-family;
-}
-
-h1 {
-  font-weight: bold;
 }
 
 a {
@@ -310,24 +306,14 @@ a.link_button_green_large {
     width: $logo-width;
     height: $logo-height;
     background-size: $logo-width $logo-height;
-    // The logo on big screens sits next to the navigation
-    position: absolute;
-    left: 0.9375rem;
-    top: -1em;
   }
 }
 
 .navigation {
   border-bottom: none;
-  font-family: $header-font-family;
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    position: relative;
-    // Move the navigation to make space for the logo
-    padding-left: ($logo-width + 20px);
-  }
   a {
     @extend %menu-item;
-    color: transparentize($color_white, 0.2);
+    color: transparentize($color_primary, 0.2);
     @media( min-width: $main_menu-mobile_menu_cutoff ) {
       padding: 0.875em 1em;
     }
@@ -562,7 +548,7 @@ p.locale-list-trigger {
 
   .rsp_menu_button{
     position: absolute;
-    top: 23px; // vertically centre the button in the header
+    top: 5px; // vertically centre the button in the header
     right: 4px; // 15px for margin minus 9 for background offset
     @extend .image-replacement;
     background-image: image-url('hamburger.png');
@@ -865,11 +851,10 @@ vertical-align: middle;
   background-position: center center;
   background-size: cover;
   color: $color_white;
-  padding: 2em 0;
+  padding: 2em 0 5em;
   position: relative;
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    padding: 5em 0;
-    margin-bottom: 3em;
+    padding: 5em 0 8em;
     background-image: image-url('homepage-background.jpg');
   }
 
@@ -888,7 +873,6 @@ vertical-align: middle;
 
   .intro__title {
     color: $color_yellow;
-    font-weight: bold;
   }
 
   .new-request__content {
@@ -902,7 +886,6 @@ vertical-align: middle;
     color: $color_yellow;
     font-size: 1.4375em;
     margin: 0 0 0.5em;
-    font-weight: bold;
   }
 
   .new-request__description {
