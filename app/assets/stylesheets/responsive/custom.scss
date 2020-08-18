@@ -41,7 +41,7 @@
 .js-loaded {
   .account-link {
     &:after {
-      border-top-color: rgba(255,255,255,0.4);
+      border-top-color: $color-red;
     }
   }
 }
@@ -62,7 +62,6 @@
   }
   a:link,
   a:visited {
-    color: #fff;
     cursor: pointer;
     text-decoration: none;
     &:hover,
@@ -98,13 +97,7 @@
 .sign_in_link,
 .sign_in_link:link,
 .sign_in_link:visited {
-  color: #fff;
   text-decoration: none;
-  &:hover,
-  &:active,
-  &:focus {
-    color: #fff;
-  }
 }
 
 .pro-pill {
